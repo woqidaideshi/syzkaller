@@ -195,6 +195,7 @@ var archConfigs = map[string]*archConfig{
 		UseNewQemuImageOptions: true,
 		CmdLine: []string{
 			"root=/dev/vda",
+			"rw",
 			"console=ttyS0",
 		},
 	},
