@@ -190,12 +190,14 @@ var archConfigs = map[string]*archConfig{
 	"linux/riscv64": {
 		Qemu:                   "qemu-system-riscv64",
 		QemuArgs:               "-machine virt -cpu rv64,sv48=on",
-		NetDev:                 "virtio-net-pci",
+		NetDev:                 "virtio-net-device",
 		RngDev:                 "virtio-rng-pci",
 		UseNewQemuImageOptions: true,
 		CmdLine: []string{
 			"root=/dev/vda",
+			"rw",
 			"console=ttyS0",
+			"selinux=0",
 		},
 	},
 	"linux/s390x": {
